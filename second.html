@@ -1,0 +1,96 @@
+<!-- todo Module no- 23.2  topic: Add onclick handler directly or via javascript -->
+
+ <!DOCTYPE html>
+ <html lang="en">
+ <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>add onclick handler </title>
+ </head>
+ <body>
+
+   <!-- *১. HTML ইনলাইন অ্যাট্রিবিউট (Inline Event Handler): সরাসরি HTML ট্যাগের ভেতরে ইভেন্ট (যেমন: onclick) লিখে দেওয়া। -->
+
+    <h1>dom events</h1>
+    <button onclick="console.log(7);">onclick</button>
+    <button onclick="console.log(6);">another click</button>
+    <button onclick="console.log('onclick is dom event');">third click</button>
+
+<br>
+
+
+    <!-- option 2 of event handler -->
+     <!-- <h2>add onclick handler directly  or vai javaScript</h2>
+     <button onclick=" makeYellow()">firstClick</button>
+     <button onclick="makeRed()">makeRed</button><br>
+
+     <button id="btn-make-blue"> make blue</button>
+
+     <button id="btn-make-purple">makePurple</button>
+
+ -->
+
+
+ <!--* practice time : event handler : inline dom Event --> 
+ 
+         <button onclick="(document.body.style.backgroundColor='red')">firstClick</button>
+
+         <button onclick="(document.body.style.backgroundColor='green')">secondClick</button><br><br>
+
+      <!-- <!-- *2nd option : event handler: js file e dom event handler : -->
+
+         <button id="make-blue-event">make-blue-event</button>
+
+               <!-- function onno jaygay likhe , than link korbo . -->
+
+         <button id="make-pink">make-pink-onclick</button>
+
+
+
+
+
+
+     <script>
+      const makeBlue=document.getElementById('make-blue-event');
+      // console.log(makeBlue);
+      makeBlue.onclick=function blueEvent(){
+          document.body.style.backgroundColor='blue'
+      }
+
+
+      //function onno jaygay likhe , than link korbo .
+     
+       const makePink=document.getElementById('make-pink');
+       //  console.log(makePink);
+
+       makePink. onclick=onclickPink;
+       function onclickPink(){
+          document.body.style.backgroundColor='pink';
+       }
+
+
+
+
+      
+        
+
+       
+     </script>
+
+
+    
+
+    <!-- <script src="./javaScript file/second.js"></script> -->
+ </body>
+
+
+
+   <!-- todo : JavaScript-এ DOM ইভেন্ট সাধারণত ৩ ভাবে লিখা যায়:
+
+   *১. HTML ইনলাইন অ্যাট্রিবিউট (Inline Event Handler): সরাসরি HTML ট্যাগের ভেতরে ইভেন্ট (যেমন: onclick) লিখে দেওয়া।
+
+    *২. ইভেন্ট হ্যান্ডলার প্রপার্টি (Event Handler Property): JavaScript কোডে এলিমেন্ট সিলেক্ট করে প্রপার্টি হিসেবে ইভেন্ট ফাংশন সেট করা।
+
+    *৩. অ্যাড ইভেন্ট লিসেনার (addEventListener): addEventListener মেথড ব্যবহার করে ইভেন্ট যোগ করা, যা সবচেয়ে আধুনিক পদ্ধতি। -->
+
+ </html>

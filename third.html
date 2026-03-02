@@ -1,0 +1,47 @@
+<!-- todo: module no-23.3        topic: Different ways to use addEventListener on a button -->
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title> addEventListener</title>
+</head>
+<body>
+
+<!-- আগে আমরা যেভাবে domEvent  লিখতাম ,inline onclick and internal onclick ,but amra aita khub kom use korbo.   amra  use korbo   addEventListener: -->
+
+   <button id="make-addEvent-onclick"> make addEventListener</button>
+   <button id="make-addEvent-onclick-green">make addEventListener green</button>
+
+   <button id="make-addEvent-red">make addEventListener Red</button>
+   <button id="make-pink">make pink</button>
+
+   <!-- আমরা একটু নতুন কিছু দেখি । যেমনঃ text, console.log  -->
+
+   <button id="make-text"> makeText</button>
+   <h2 id="heading"> heading</h2>
+
+
+   <script>
+    document.getElementById('make-text').addEventListener('mouseenter', function(){
+        console.log('text');
+    })
+
+    document.getElementById('heading').addEventListener('mouseenter', function(){
+        // document.body.style.color='yellow'
+        document.body.style.fontSize='30px'
+    })
+
+
+
+       
+
+        
+
+   </script>
+
+   <script src="./javaScript file/third.js"></script>
+    
+</body>
+</html>
