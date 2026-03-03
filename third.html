@@ -23,6 +23,14 @@
    <h2 id="heading"> heading</h2>
 
 
+   <!--  * mouse click event:  -->
+     <p>mouse click event:</p>
+   <button  id="mouse">MouseEvent</button><br><br>
+
+     <!-- mouse Movement: -->
+      <h3>mouse movement events:</h3>
+      <button id="mouse-movement">mouse movement</button>
+
    <script>
     document.getElementById('make-text').addEventListener('mouseenter', function(){
         console.log('text');
@@ -33,15 +41,54 @@
         document.body.style.fontSize='30px'
     })
 
+    /** mouseEvent:
+     * 1.Clicking Events:
+     * 2.Movement Events:
+     * 3.Hover Events:
+     * */
 
 
-       
+     // 1.clicking event:
+     // click
+      document.getElementById('mouse').addEventListener('click', function(){
+                document.body.style.backgroundColor='blueviolet'
+      })
+     // dblclick
+      document.getElementById('mouse').addEventListener('dblclick',function(){
+        document.body.style.backgroundColor='orange';
+      })
+
+    //    contextmenu: 
+      document.getElementById('mouse').addEventListener('contextmenu',function(){
+        document.body.style.backgroundColor='aqua'
+      })
+
+
+
+      // 2.Movement Events:
+      // 1. mouse-up: যখন চেপে ধরা মাউস বাটনটি ছেড়ে দেওয়া হয়  
+
+      document.getElementById('mouse-movement').addEventListener('mouseup',function(){
+        document.body.style.backgroundColor='aquamarine'
+      })
+
+      //  2.mouse-down: মাউস চাপ দিয়ে ধরা হয়েছে ,কিন্তু ছাড়া হয় নাই
+      document.getElementById('mouse-movement').addEventListener
+      ('mousedown', function(){
+        document.body.style.backgroundColor='lightblue'
+      })
+
+
+
 
         
 
    </script>
 
+ 
+
    <script src="./javaScript file/third.js"></script>
+ 
     
 </body>
 </html>
