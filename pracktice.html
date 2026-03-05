@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>create a comment box and display comment</title>
+    <style>
+        .comment-box{
+            background-color: rgb(192, 215, 216);
+            padding: 10px;
+            margin: 10px;
+            border: 2px solid blueviolet;
+            border-radius: 10px;
+
+        }
+    </style>
+</head>
+<body>
+    <section>
+        <div id="comment-container">
+
+            <p class="comment-box">Lorem ipsum dolor sit amet consectetur adipisicing elit. Fugiat pariatur quas animi rerum repudiandae accusantium quasi provident exercitationem quisquam. Ratione necessitatibus quis non excepturi! Enim molestiae voluptatem explicabo est dignissimos.</p>
+
+            <p class="comment-box">At optio alias numquam qui culpa expedita deleniti nisi dolor, dolorem aspernatur fugiat reprehenderit omnis distinctio deserunt illum, sunt tempore est adipisci repudiandae quasi quos assumenda? Natus autem nesciunt aliquid!</p>
+
+            <p class="comment-box">Ea, incidunt repellendus! Nemo error sint voluptate ratione eius soluta deserunt, qui ullam repellendus magni blanditiis. Consectetur, consequatur, nisi, tempora qui amet delectus illum dolorem blanditiis voluptas saepe rerum modi.</p>
+        </div>
+
+        <!-- <form action=""> -->
+
+            <textarea name="" id=" comment-felled" cols="50" rows="4" placeholder=" add a comment "></textarea><br>
+
+            <button id="post-btn">post </button>
+            
+        <!-- </form> -->
+    </section>
+
+    <script>
+        // 1st step: button ke niye asho 
+        document.getElementById('post-btn').addEventListener('click',function(){
+            // 2nd step: input ta ke niye ashi 
+
+            const inputFelled= document.getElementById(' comment-felled');
+            const value= inputFelled.value;
+          
+
+            // 3rd step : parent e bosate hobe:
+            const getParent= document.getElementById('comment-container');
+           
+            //    create a new paragraph tag 
+              const newComment= document.createElement('p');
+              // add classList in p tag:
+                newComment.classList.add('comment-box')
+                newComment.innerText=value;
+            // 4ht step : append korte hobe :
+
+            const append =getParent.appendChild(newComment);
+
+
+            // 5th step: comments clear :
+            inputFelled.value='';
+
+            
+            
+            
+        })
+    </script>
+    
+</body>
+</html>

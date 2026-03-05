@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>click to change title</title>
+</head>
+<body>
+
+    <!-- আমরা বাটনে ক্লিক করলে হেডিং চেঞ্জ হবে.  -->
+
+    <h2 id="title">chang dom event:</h2>
+    <button id="text">submit</button>
+
+        <!-- আমরা বাটনে ক্লিক করলে হেডিং চেঞ্জ হবে.  -->
+
+        <h2 id="log-heading">login heading</h2>
+        <button id="log">login</button> 
+
+        <!-- এই বার আমরা দেখবো যে কিভাবে, একটা dynamic টাইটেল কে চেঞ্জ করা যায়  -->
+        <br><br><br>
+        <h2 id="dynamic-Text">Dynamic-name:</h2>
+       
+     
+        <input id="input" type="text" placeholder="Enter your name:"><br><br>
+        <button id="update">update</button>
+
+
+        <!-- এই বার আমরা দেখবো যে কিভাবে, একটা dynamic টাইটেল কে চেঞ্জ করা যায়  -->
+
+        <br><br><br>
+
+        <h2 id="family-name">who </h2>
+        <input type="text" placeholder="EnterYourName:" id="input-filled"> <br><br>
+        <button id="name-update">saveName</button>
+        <br><br><br>
+
+        <h2 id="dhava-heading"> Dhava Name</h2>
+
+        <input type="text" placeholder="Enter your feverite Dhava:" id="dhava">
+        <br>
+        <button id="Dhava-btn">like</button>
+
+
+    <script>
+
+        // 1st step: 
+         document.getElementById('Dhava-btn').addEventListener('click',function(){   
+            // stap: 2 
+
+              const dhavaInput= document.getElementById('dhava');
+               const dhavaName= dhavaInput.value;
+            //    console.log(dhavaName);
+            // stap:3 
+                const dhavaTitle=document.getElementById('dhava-heading');
+                dhavaTitle.innerText= dhavaName;
+                
+                  
+              
+         })
+       
+
+    </script>
+    <script src="./javaScript file/fourth.js"></script>
+    
+</body>
+</html>
